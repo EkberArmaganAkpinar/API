@@ -21,7 +21,7 @@ namespace WebApi.Controllers
             [HttpGet]
         public JsonResult Get()
         {
-           
+           //BÜTÜN TASKLARI GETİREN GET METHODU
             logger.Info("Tasklar Listelendi");
             Conn mySqlGet = new Conn();
             JsonResult jsonResult = new JsonResult(mySqlGet.Task());
@@ -33,7 +33,7 @@ namespace WebApi.Controllers
         [HttpPost]
         public JsonResult Post(Task task)
         {
-            
+            //YENİ BİR TASK EKLEMEK İÇİN KULLANILAN POST METHODU
             logger.Info("Yeni Task Eklendi");
             Conn mySqlGet = new Conn();
             mySqlGet.AddTask(task);
@@ -45,7 +45,7 @@ namespace WebApi.Controllers
         [HttpGet("{id}")]
         public JsonResult Get(int id)
         {
-           
+           //İD'YE GÖRE ARANAN TASKI GETİREN GET METHODU 
             logger.Info("Aranan Task Bulundu");
             Conn mySqlGet = new Conn();
             JsonResult jsonResult = new JsonResult(mySqlGet.SelectedTask(id));

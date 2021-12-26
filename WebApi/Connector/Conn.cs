@@ -20,10 +20,10 @@ namespace WebApi.Connector
         {
             List<Task> allTasks = new List<Task>();
             
-
+              //bAĞLANTI SAĞLANDI
             using (MySqlConnection connMySql= new MySqlConnection(constring))
             {
-               
+               //BAĞLANTIYA İLGİLİ VERİ TABANI SORGUSU VERİLDİ
                 using (MySqlCommand cmd = connMySql.CreateCommand())
                 {
                     cmd.CommandText = "Select * from task";
@@ -33,6 +33,7 @@ namespace WebApi.Connector
 
 
                     connMySql.Open();
+                    //İLGİLİ VERİ TABANI SORGUSU ÇALIŞTIRILIP TASKLAR GETİRİLDİ
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
                       
@@ -58,12 +59,14 @@ namespace WebApi.Connector
 
             using (MySqlConnection connMySql = new MySqlConnection(constring))
             {
-
+                //TASK EKLEMEK İÇİN İLGİLİ VERİ TABANI SORGUSU YAZILDI
                 using (MySqlCommand cmd = connMySql.CreateCommand())
                 {
+                    
                     cmd.CommandText = "insert into task(Task_name) values(@Task_name)";
                     string tname;
                     tname = task.task;
+                    //İLGİLİ Task_name CONTROLLERDAN PARAMETRE OLARAK ALINIP SORGUYA EKLENDİ
                     cmd.Parameters.AddWithValue("@Task_name",tname);
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.Connection = connMySql;
@@ -96,9 +99,10 @@ namespace WebApi.Connector
 
             using (MySqlConnection connMySql = new MySqlConnection(constring))
             {
-
+                //SEÇİLEN İDYE GÖRE İLGİLİ TASKI BULABİLMESİ İÇİN İLGİLİ VERİ TABANI SORGUSU YAZILDI
                 using (MySqlCommand cmd = connMySql.CreateCommand())
                 {
+                    //İLGİLİ id CONTROLLERDAN PARAMETRE OLARAK ALINIP SORGUYA EKLENDİ
                     cmd.CommandText = "Select * from task where id="+id+"";
                     cmd.CommandType = System.Data.CommandType.Text;
                     cmd.Connection = connMySql;
