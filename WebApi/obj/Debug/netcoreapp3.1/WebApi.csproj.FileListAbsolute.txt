@@ -22,3 +22,7 @@ C:\Users\ekber\Desktop\Api\WebApi\WebApi\obj\Debug\netcoreapp3.1\WebApi.pdb
 C:\Users\ekber\Desktop\Api\WebApi\WebApi\obj\Debug\netcoreapp3.1\WebApi.genruntimeconfig.cache
 C:\Users\ekber\Desktop\Api\WebApi\WebApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\ekber\Desktop\Api\WebApi\WebApi\bin\Debug\netcoreapp3.1\Pomelo.Data.MySql.dll
+C:\Users\ekber\Desktop\Api\WebApi\WebApi\bin\Debug\netcoreapp3.1\NLog.config
+C:\Users\ekber\Desktop\Api\WebApi\WebApi\bin\Debug\netcoreapp3.1\NLog.dll
+C:\Users\ekber\Desktop\Api\WebApi\WebApi\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+C:\Users\ekber\Desktop\Api\WebApi\WebApi\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll

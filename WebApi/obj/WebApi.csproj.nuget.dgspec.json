@@ -40,6 +40,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.13, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.14.0, )"
+            },
             "Pomelo.Data.MySql.Unofficial": {
               "target": "Package",
               "version": "[1.0.1, )"
